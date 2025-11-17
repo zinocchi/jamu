@@ -4,6 +4,7 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
+import ConsultationLayout from '@/layouts/consultation';
 import bgJamu from '@/lib/assets/Desain_tanpa_judul_upscayl_4x_ultramix-balanced-4x.png';
 import logoJamu from '@/lib/assets/Jamu!.png';
 import { Head } from '@inertiajs/react';
@@ -17,7 +18,7 @@ export default function Welcome() {
                 style={{ backgroundImage: `url(${bgJamu})` }}
             >
                 <Head title="Jamu!" />
-                <div className="flex h-20 w-full items-center justify-between gap-4 bg-black/40 px-16 font-semibold text-white shadow-lg shadow-black/10 backdrop-blur-lg">
+                <div className="flex h-20 w-full items-center justify-between gap-4 bg-black/25 px-16 font-semibold text-white shadow-2xl shadow-black/40 backdrop-blur-lg">
                     <a href="">TESTIMONI</a>
                     <a href="">PRODUK</a>
                     <a href="/">
@@ -39,7 +40,6 @@ export default function Welcome() {
                     </button>
                 </div>
             </div>
-
             <div className="mx-12 flex flex-row justify-between gap-8 py-24 text-center">
                 <Card className="w-xl border-none bg-white py-12 font-[Open_sans] text-[#f87108]">
                     <HandCoins className="h-16 w-auto items-center justify-center text-[#f87108]" />
@@ -80,6 +80,26 @@ export default function Welcome() {
                     </CardHeader>
                 </Card>
             </div>
+
+            <div className="flex flex-col items-center justify-center gap-12 py-12">
+                <h1 className="text-center font-[Open_sans] text-5xl font-bold text-[#f87108] uppercase">
+                    sekilas <br />
+                    tentang kami
+                </h1>
+                <Card className="max-w-5xl min-w-xl border-none bg-[#963f16] p-8 font-[Open_sans] font-semibold">
+                    <CardDescription className="text-[18px] text-white">
+                        Kami adalah UMKM lokal yang menghadirkan jamu sebagai
+                        minuman sehari-hari anak muda, bukan sekadar warisan
+                        tradisi tapi juga gaya hidup sehat yang kekinian. Dengan
+                        bahan-bahan alami seperti kunyit, jahe, dan rempah
+                        pilihan, kami percaya bahwa sehat itu harus bisa
+                        dinikmati dengan cara yang simple, enak, dan cocok buat
+                        rutinitas modern.
+                    </CardDescription>
+                </Card>
+            </div>
+
+            <ConsultationLayout />
         </div>
     );
 }
