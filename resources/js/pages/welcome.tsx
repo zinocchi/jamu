@@ -18,14 +18,14 @@ export default function Welcome() {
                 style={{ backgroundImage: `url(${bgJamu})` }}
             >
                 <Head title="Jamu!" />
-                <div className="flex h-20 w-full items-center justify-between gap-4 bg-black/25 px-16 font-semibold text-white shadow-2xl shadow-black/40 backdrop-blur-lg">
+                <div className="flex h-16 w-full items-center justify-between gap-4 bg-black/25 px-16 text-sm font-semibold text-white shadow-2xl shadow-black/40 backdrop-blur-lg">
                     <a href="">TESTIMONI</a>
                     <a href="">PRODUK</a>
                     <a href="/">
                         <img
                             src={logoJamu}
                             alt="Logo Jamu!"
-                            className="h-32 w-auto"
+                            className="h-28 w-auto"
                         />
                     </a>
                     <a href="">TENTANG KAMI</a>
@@ -100,6 +100,15 @@ export default function Welcome() {
             </div>
 
             <ConsultationLayout />
+            <div className="mt-28 text-center">
+                <h1 className="font-[Open_sans] text-5xl font-black text-[#963f16]">
+                    NO SHORTCUTS
+                </h1>
+                <p className="text-4xl font-light text-[#963f16]">
+                    Just authentic, natural jamu.
+                </p>
+                {/* LANJUTIN BAGIAN GALERI PRODUK DI SINI */}
+            </div>
         </div>
     );
 }
