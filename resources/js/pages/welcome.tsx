@@ -5,17 +5,17 @@ import {
     CardTitle,
 } from '@/components/ui/card';
 import ConsultationLayout from '@/layouts/consultation';
-import bgJamu from '@/lib/assets/Desain_tanpa_judul_upscayl_4x_ultramix-balanced-4x.png';
-import logoJamu from '@/lib/assets/Jamu!.png';
 import { Head } from '@inertiajs/react';
 import { HandCoins, ShoppingBag, Vegan } from 'lucide-react';
+
+
 
 export default function Welcome() {
     return (
         <div className="bg-[#f9f5f0]">
             <div
                 className="min-h-screen w-full bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${bgJamu})` }}
+                style={{ backgroundImage: `url(/images/hero-bg.png)` }}
             >
                 <Head title="Jamu!" />
                 <div className="flex h-16 w-full items-center justify-between gap-4 bg-black/25 px-16 text-sm font-semibold text-white shadow-2xl shadow-black/40 backdrop-blur-lg">
@@ -23,7 +23,7 @@ export default function Welcome() {
                     <a href="">PRODUK</a>
                     <a href="/">
                         <img
-                            src={logoJamu}
+                            src="/images/logo-jamu.png"
                             alt="Logo Jamu!"
                             className="h-28 w-auto"
                         />
@@ -40,9 +40,11 @@ export default function Welcome() {
                     </button>
                 </div>
             </div>
+
+            {/* Section Fitur */}
             <div className="mx-12 flex flex-row justify-between gap-8 py-24 text-center">
                 <Card className="w-xl border-none bg-white py-12 font-[Open_sans] text-[#f87108]">
-                    <HandCoins className="h-16 w-auto items-center justify-center text-[#f87108]" />
+                    <HandCoins className="mx-auto h-16 w-16 text-[#f87108]" />
                     <CardHeader>
                         <CardTitle className="text-2xl font-bold uppercase">
                             harga bersahabat
@@ -55,7 +57,7 @@ export default function Welcome() {
                 </Card>
 
                 <Card className="w-xl border-none bg-white py-12 font-[Open_sans] text-[#f87108]">
-                    <Vegan className="h-16 w-auto items-center justify-center text-[#f87108]" />
+                    <Vegan className="mx-auto h-16 w-16 text-[#f87108]" />
                     <CardHeader>
                         <CardTitle className="text-2xl font-bold uppercase">
                             segar dan alami
@@ -68,7 +70,7 @@ export default function Welcome() {
                 </Card>
 
                 <Card className="w-xl border-none bg-white py-12 font-[Open_sans] text-[#f87108]">
-                    <ShoppingBag className="h-16 w-auto items-center justify-center text-[#f87108]" />
+                    <ShoppingBag className="mx-auto h-16 w-16 text-[#f87108]" />
                     <CardHeader>
                         <CardTitle className="text-2xl font-bold uppercase">
                             varian lengkap
@@ -81,6 +83,7 @@ export default function Welcome() {
                 </Card>
             </div>
 
+            {/* Section Tentang Kami */}
             <div className="flex flex-col items-center justify-center gap-12 py-12">
                 <h1 className="text-center font-[Open_sans] text-5xl font-bold text-[#f87108] uppercase">
                     sekilas <br />
@@ -100,14 +103,72 @@ export default function Welcome() {
             </div>
 
             <ConsultationLayout />
-            <div className="mt-28 text-center">
-                <h1 className="font-[Open_sans] text-5xl font-black text-[#963f16]">
-                    NO SHORTCUTS
-                </h1>
-                <p className="text-4xl font-light text-[#963f16]">
-                    Just authentic, natural jamu.
-                </p>
-                {/* LANJUTIN BAGIAN GALERI PRODUK DI SINI */}
+
+            {/* Section NO SHORTCUTS & Produk */}
+            <div className="mt-28 bg-white py-16">
+                <div className="text-center">
+                    <h1 className="font-[Open_sans] text-5xl font-black text-[#963f16]">
+                        NO SHORTCUTS
+                    </h1>
+                    <p className="text-4xl font-light text-[#963f16]">
+                        Just authentic, natural jamu.
+                    </p>
+                </div>
+
+                {/* Section Produk */}
+                <div className="mt-16 px-8">
+                    <div className="text-center">
+                        <h2 className="mb-2 font-[Open_sans] text-4xl font-bold text-[#f87108] uppercase">
+                            CORA PRODUK KAMI
+                        </h2>
+                        <h3 className="mb-8 font-[Open_sans] text-3xl font-bold text-[#f87108] uppercase">
+                            PRODUK KAMI
+                        </h3>
+                    </div>
+
+                    {/* Grid Produk - 3 Gambar Berjejer */}
+                    <div className="mx-auto max-w-6xl">
+                        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                            {/* Produk 1 */}
+                            <div className="flex flex-col items-center">
+                                <div className="mb-4 h-80 w-80 overflow-hidden rounded-full border-4 border-[#f87108] bg-white p-2">
+                                    <img
+                                        src="../../images/jamu/jamuNoShortcuts.png"
+                                        alt="Produk Jamu 1"
+                                        className="h-full w-full object-cover"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Produk 2 */}
+                            <div className="flex flex-col items-center">
+                                <div className="mb-4 h-80 w-80 overflow-hidden rounded-full border-4 border-[#f87108] bg-white p-2">
+                                    <img
+                                        src="../../images/jamu/jamuNoShortcuts2.png"
+                                        alt="Produk Jamu 2"
+                                        className="h-full w-full object-cover"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Produk 3 */}
+                            <div className="flex flex-col items-center">
+                                <div className="mb-4 h-80 w-80 overflow-hidden rounded-full border-4 border-[#f87108] bg-white p-2">
+                                    <img
+                                        src="../../images/jamu/jamuNoShortcuts3.png"
+                                        alt="Produk Jamu 3"
+                                        className="h-full w-full object-cover"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Footer */}
+            <div className="bg-[#963f16] py-8 text-center text-white">
+                <p>© 2024 Jamu! - All rights reserved</p>
             </div>
         </div>
     );
