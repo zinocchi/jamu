@@ -19,3 +19,4 @@ function isSmallerThanBreakpoint() {
 export function useIsMobile() {
     return useSyncExternalStore(mediaQueryListener, isSmallerThanBreakpoint);
 }
+    
